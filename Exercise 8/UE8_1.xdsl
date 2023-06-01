@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in trial version of GeNIe, which can be used for evaluation purposes only -->
+<smile version="1.0" id="Infektion" numsamples="10000" discsamples="10000">
+	<properties>
+		<property id="infiziert">0.2</property>
+		<property id="nicht_infiziert">0,8</property>
+	</properties>
+	<nodes>
+		<cpt id="Infektion_2">
+			<state id="infiziert" />
+			<state id="nicht_infiziert" />
+			<probabilities>0.2 0.8</probabilities>
+			<property id="positiv">0,2</property>
+			<property id="negativ">0,8\n</property>
+		</cpt>
+		<cpt id="Getestet">
+			<state id="positiv" />
+			<state id="negativ" />
+			<parents>Infektion_2</parents>
+			<probabilities>0.7 0.3 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.0.2919.2 EVALUATION" name="UE8">
+			<node id="Infektion_2">
+				<name>Infektion</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>102 190 168 225</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Getestet">
+				<name>Getestet</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>341 190 397 225</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
